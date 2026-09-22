@@ -1,0 +1,138 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "gofio/gofio",
+    "type": "project",
+    "description": "Red social en español con feed, Vidu, chat, monedero y gamificación (Laravel 12 + Inertia + Vue 3).",
+    "keywords": ["laravel", "social-network", "inertia", "vue", "gofio"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "EdsonDev",
+            "email": "edinsonprogrammer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "inertiajs/inertia-laravel": "^3.1",
+        "laravel/framework": "^12.0",
+        "laravel/reverb": "^1.10",
+        "laravel/sanctum": "^4.3",
+        "laravel/tinker": "^2.10.1",
+        "predis/predis": "^3.5"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.24",
+        "laravel/sail": "^1.41",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^11.5.50"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "setup": [
+            "@composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate --ansi",
+            "@php artisan migrate --force --no-interaction",
+            "@composer run-script setup:frontend",
+            "@composer run-script gofio:sync"
+        ],
+        "setup:frontend": [
+            "pnpm install",
+            "pnpm run build"
+        ],
+        "setup:frontend:prod": [
+            "pnpm install --frozen-lockfile",
+            "pnpm run build"
+        ],
+        "gofio:sync": [
+            "@php artisan storage:link --force",
+            "@php artisan gofio:themes:sync --no-interaction",
+            "@php artisan gofio:icon-packs:sync --no-interaction"
+        ],
+        "optimize:prod": [
+            "@php artisan config:cache",
+            "@php artisan route:cache",
+            "@php artisan view:cache",
+            "@php artisan event:cache"
+        ],
+        "deploy": [
+            "@composer install --no-dev --optimize-autoloader --no-interaction",
+            "@composer run-script setup:frontend:prod",
+            "@php artisan migrate --force --no-interaction",
+            "@composer run-script gofio:sync",
+            "@composer run-script optimize:prod",
+            "@php artisan queue:restart"
+        ],
+        "deploy:update": [
+            "@composer install --no-dev --optimize-autoloader --no-interaction",
+            "@composer run-script setup:frontend:prod",
+            "@php artisan migrate --force --no-interaction",
+            "@composer run-script gofio:sync",
+            "@composer run-script optimize:clear",
+            "@composer run-script optimize:prod",
+            "@php artisan queue:restart"
+        ],
+        "optimize:clear": [
+            "@php artisan config:clear",
+            "@php artisan route:clear",
+            "@php artisan view:clear",
+            "@php artisan event:clear"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "pnpm exec concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"php artisan pail --timeout=0\" \"pnpm run dev\" --names=server,queue,logs,vite --kill-others"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi",
+            "@php artisan test"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

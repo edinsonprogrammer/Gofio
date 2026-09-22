@@ -1,0 +1,46 @@
+{
+    "name": "Índigo Corporativo",
+    "slug": "indigo-corporativo",
+    "description": "Tema profesional azul índigo con acentos violeta. Layout predeterminado con paleta corporativa.",
+    "author": "Gofio",
+    "version": "2.0.0",
+    "is_default": false,
+    "requires_creator_plus": false,
+    "layout_variant": "default",
+    "variables": {
+        "--bg-principal":               "#EEF2FF",
+        "--text-principal":             "#1E1B4B",
+        "--color-brand":                "#4F46E5",
+        "--color-surface":              "#FFFFFF",
+        "--color-border":               "#C7D2FE",
+        "--color-muted":                "#6366F1",
+        "--color-link":                 "#4338CA",
+        "--color-topbar-dark":          "#3730A3",
+        "--color-panel":                "#EEF2FF",
+        "--color-brand-hover":          "#4338CA",
+        "--color-input-border":         "#A5B4FC",
+        "--color-btn-secondary-bg":     "#EEF2FF",
+        "--color-btn-secondary-border": "#C7D2FE",
+        "--color-btn-secondary-text":   "#312E81",
+        "--color-topbar-gradient-from": "#3730A3",
+        "--color-topbar-gradient-to":   "#6366F1",
+        "--color-accent":               "#818CF8",
+        "--color-accent-soft":          "#E0E7FF",
+
+        "--color-success":              "#059669",
+        "--color-success-soft":         "#D1FAE5",
+        "--color-error":                "#DC2626",
+        "--color-error-soft":           "#FEE2E2",
+
+        "--font-sans":                  "'Inter', system-ui, sans-serif",
+        "--font-size-base":             "15px",
+
+        "--radius-sm":                  "4px",
+        "--radius-md":                  "8px",
+        "--radius-lg":                  "12px",
+        "--radius-xl":                  "16px",
+
+        "--shadow-card":                "0 1px 4px rgba(79, 70, 229, 0.08)",
+        "--shadow-elevated":            "0 4px 16px rgba(79, 70, 229, 0.12)"
+    }
+}

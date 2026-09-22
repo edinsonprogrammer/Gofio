@@ -1,0 +1,68 @@
+/*
+ * Tema Inicio (Login): header negro, botones azul oscuro pill, «!» cyan (#00EAFF).
+ * Sidebars, compositor y paneles siguen la paleta del login.
+ */
+
+.gofio-topbar {
+    background: linear-gradient(#262626, #171717);
+    box-shadow: 0 2px rgba(0, 0, 0, 0.25), inset 0 -1px rgba(255, 255, 255, 0.05);
+}
+
+.gofio-btn-primary {
+    background: linear-gradient(180deg, var(--color-brand) 0%, var(--color-brand-hover) 100%);
+    border-radius: 9999px;
+    font-weight: 800;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.35), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.gofio-btn-primary:hover:not(:disabled) {
+    background: linear-gradient(180deg, var(--color-brand) 0%, var(--color-brand-hover) 100%);
+    filter: brightness(1.08);
+}
+
+.gofio-btn-primary:active:not(:disabled) {
+    filter: brightness(0.95);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gofio-box,
+.gofio-sidebar-stats {
+    border-radius: 14px;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.gofio-box-header-accent,
+.gofio-sidebar-stats__header {
+    background: linear-gradient(180deg, var(--color-topbar-gradient-from), var(--color-topbar-gradient-to));
+}
+
+.gofio-input {
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.gofio-category-filter--active {
+    background: color-mix(in srgb, var(--color-brand) 12%, white);
+    color: var(--color-brand-hover);
+}
+
+.gofio-category-filter--active .gofio-category-filter__icon {
+    color: var(--color-brand);
+}
+
+.composer-tool-btn {
+    color: var(--color-brand);
+}
+
+.composer-tool-btn:hover:not(:disabled) {
+    background-color: var(--color-panel);
+}
+
+.creator-plus-sidebar-cta__head {
+    background: linear-gradient(135deg, #262626, var(--color-brand), var(--color-accent));
+}
+
+.gofio-sidebar-plus-banner {
+    border-color: color-mix(in srgb, var(--color-brand) 35%, var(--color-border));
+    background: linear-gradient(135deg, var(--color-panel) 0%, var(--color-accent-soft) 100%);
+}

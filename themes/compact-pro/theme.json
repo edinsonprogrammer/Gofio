@@ -1,0 +1,47 @@
+{
+    "name": "Compact Pro",
+    "slug": "compact-pro",
+    "description": "Layout compacto de alta densidad, ideal para leer mucho contenido sin desplazarse. Inspirado en interfaces profesionales tipo Reddit/HN.",
+    "author": "Gofio",
+    "version": "1.0.0",
+    "is_default": false,
+    "requires_creator_plus": false,
+    "layout_variant": "compact",
+    "variables": {
+        "--bg-principal":               "#F6F6EF",
+        "--text-principal":             "#222222",
+        "--color-brand":                "#FF6600",
+        "--color-surface":              "#FFFFFF",
+        "--color-border":               "#DDDDDD",
+        "--color-muted":                "#888888",
+        "--color-link":                 "#0000EE",
+        "--color-topbar-dark":          "#FF6600",
+        "--color-panel":                "#F6F6EF",
+        "--color-brand-hover":          "#E05A00",
+        "--color-input-border":         "#CCCCCC",
+        "--color-btn-secondary-bg":     "#EEEEEE",
+        "--color-btn-secondary-border": "#CCCCCC",
+        "--color-btn-secondary-text":   "#333333",
+        "--color-topbar-gradient-from": "#FF6600",
+        "--color-topbar-gradient-to":   "#FF7722",
+        "--color-accent":               "#FF6600",
+        "--color-accent-soft":          "#FFF3E8",
+
+        "--font-sans":                  "Verdana, Geneva, Tahoma, sans-serif",
+        "--font-size-base":             "13px",
+        "--line-height-base":           "1.45",
+
+        "--radius-sm":                  "2px",
+        "--radius-md":                  "3px",
+        "--radius-lg":                  "4px",
+        "--radius-xl":                  "6px",
+        "--radius-full":                "4px",
+
+        "--shadow-card":                "none",
+        "--shadow-elevated":            "0 1px 3px rgba(0,0,0,0.08)",
+        "--shadow-topbar":              "0 1px 0 rgba(0,0,0,0.1)",
+
+        "--content-gap":                "0.25rem",
+        "--topbar-height":              "40px"
+    }
+}

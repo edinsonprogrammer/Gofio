@@ -1,0 +1,83 @@
+/*
+ * Twitter Dark — estilos adicionales para el layout de navegación lateral.
+ * Complementa las reglas del layout "sidebar-nav" definidas en app.css.
+ */
+
+/* ─── Fondo oscuro general ──────────────────────────────────────────── */
+body {
+    background-color: #15202B;
+    color: #F7F9F9;
+}
+
+/* ─── Cajas de contenido con bordes sutiles ─────────────────────────── */
+.gofio-box {
+    background: #1E2732;
+    border-color: #2F3336;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.gofio-box-header {
+    background: #1E2732;
+    border-color: #2F3336;
+    color: #8B98A5;
+}
+
+/* ─── Botones redondeados estilo Twitter ────────────────────────────── */
+.gofio-btn-primary {
+    border-radius: 9999px;
+    background: #1D9BF0;
+    font-weight: 700;
+}
+
+.gofio-btn-primary:hover {
+    background: #1A8CD8;
+}
+
+.gofio-btn-secondary {
+    border-radius: 9999px;
+    border-color: #2F3336;
+    color: #F7F9F9;
+}
+
+/* ─── Input oscuro ──────────────────────────────────────────────────── */
+.gofio-input {
+    background: #15202B;
+    border-color: #2F3336;
+    color: #F7F9F9;
+    border-radius: 9999px;
+}
+
+.gofio-input:focus {
+    border-color: #1D9BF0;
+    box-shadow: 0 0 0 2px rgba(29, 155, 240, 0.2);
+}
+
+/* ─── Topbar como sidebar vertical en modo sidebar-nav ──────────────── */
+[data-gofio-layout="sidebar-nav"] .gofio-topbar {
+    background: #15202B;
+    border-right: 1px solid #2F3336;
+}
+
+/* ─── Botones de navegación con hover circular ──────────────────────── */
+.gofio-nav-icon-btn {
+    border-radius: 9999px;
+    padding: 0.5rem;
+    transition: background 0.15s;
+}
+
+.gofio-nav-icon-btn:hover {
+    background: rgba(239, 243, 244, 0.1);
+}
+
+/* ─── Feed con fondo oscuro ─────────────────────────────────────────── */
+.gofio-category-filter {
+    border-radius: 9999px;
+    color: #8B98A5;
+}
+
+.gofio-category-filter--active {
+    background: rgba(29, 155, 240, 0.12);
+    color: #1D9BF0;
+    font-weight: 700;
+}

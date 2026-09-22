@@ -1,0 +1,38 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "author": "EdsonDev",
+    "type": "module",
+    "packageManager": "pnpm@11.2.2",
+    "scripts": {
+        "build": "vite build",
+        "build:prod": "vite build",
+        "setup": "pnpm install",
+        "setup:prod": "pnpm install --frozen-lockfile && pnpm run build",
+        "dev": "vite",
+        "import:fa-gemas": "node scripts/generate-fa-token-es-static.mjs && node scripts/import-fa-classic-gemas.mjs",
+        "install:fa-kit": "node scripts/install-fa-kit.mjs",
+        "import:fa-graphite-gemas": "node scripts/import-fa-graphite-gemas.mjs",
+        "import:fa-slab-gemas": "node scripts/import-fa-slab-gemas.mjs",
+        "import:fa-proplus-gemas": "node scripts/import-fa-graphite-gemas.mjs && node scripts/import-fa-slab-gemas.mjs"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^7.3.0",
+        "@tailwindcss/vite": "^4.3.2",
+        "axios": "^1.11.0",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^2.0.0",
+        "tailwindcss": "^4.3.2",
+        "vite": "^7.0.7"
+    },
+    "dependencies": {
+        "@inertiajs/vue3": "^3.6.0",
+        "@vitejs/plugin-vue": "^6.0.7",
+        "emoji-mart-vue-fast": "^15.0.5",
+        "highlight.js": "^11.11.1",
+        "laravel-echo": "^2.3.7",
+        "plyr": "^3.8.4",
+        "pusher-js": "^8.5.0",
+        "vue": "^3.5.39"
+    }
+}

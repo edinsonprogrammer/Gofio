@@ -1,0 +1,30 @@
+{
+  "name": "Gemas",
+  "slug": "gemas",
+  "description": "Set premium de iconos Classic (Font Awesome Free): SVG con nombres en español en classic/solid y classic/regular.",
+  "author": "Gofio",
+  "version": "1.0.0",
+  "ranks": {
+    "administrador": "fa-solid fa-chess-king",
+    "moderador": "fa-solid fa-chess-knight",
+    "nuevo": "fa-solid fa-leaf",
+    "usuario": "fa-solid fa-bolt",
+    "advanced": "fa-solid fa-fire",
+    "platinum": "fa-solid fa-trophy",
+    "diamond": "fa-solid fa-gem"
+  },
+  "medals": {
+    "primer-paso": "fa-solid fa-shoe-prints",
+    "conversador": "fa-solid fa-comments",
+    "creador-activo": "fa-solid fa-pen-nib",
+    "karma-100": "fa-solid fa-bolt",
+    "karma-1000": "fa-solid fa-fire",
+    "verificado": "fa-solid fa-circle-check",
+    "staff-pick": "fa-solid fa-hand-sparkles"
+  },
+  "classic_icons": {
+    "solid": 2001,
+    "regular": 273,
+    "index": "indice-classic.json"
+  }
+}

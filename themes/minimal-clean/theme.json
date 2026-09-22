@@ -1,0 +1,48 @@
+{
+    "name": "Minimal Clean",
+    "slug": "minimal-clean",
+    "description": "Layout mínimo tipo blog/Medium: solo columna de contenido centrada, sin sidebars. Tipografía serif elegante.",
+    "author": "Gofio",
+    "version": "1.0.0",
+    "is_default": false,
+    "requires_creator_plus": false,
+    "layout_variant": "minimal",
+    "variables": {
+        "--bg-principal":               "#FAFAF8",
+        "--text-principal":             "#1A1A1A",
+        "--color-brand":                "#2563EB",
+        "--color-surface":              "#FFFFFF",
+        "--color-border":               "#E5E7EB",
+        "--color-muted":                "#6B7280",
+        "--color-link":                 "#2563EB",
+        "--color-topbar-dark":          "#FFFFFF",
+        "--color-panel":                "#F9FAFB",
+        "--color-brand-hover":          "#1D4ED8",
+        "--color-input-border":         "#D1D5DB",
+        "--color-btn-secondary-bg":     "#F3F4F6",
+        "--color-btn-secondary-border": "#D1D5DB",
+        "--color-btn-secondary-text":   "#374151",
+        "--color-topbar-gradient-from": "#FFFFFF",
+        "--color-topbar-gradient-to":   "#FFFFFF",
+        "--color-accent":               "#3B82F6",
+        "--color-accent-soft":          "#EFF6FF",
+
+        "--color-success":              "#16A34A",
+        "--color-success-soft":         "#DCFCE7",
+        "--color-error":                "#DC2626",
+        "--color-error-soft":           "#FEE2E2",
+
+        "--font-sans":                  "'Georgia', 'Times New Roman', serif",
+        "--font-size-base":             "17px",
+        "--line-height-base":           "1.7",
+
+        "--radius-sm":                  "2px",
+        "--radius-md":                  "4px",
+        "--radius-lg":                  "6px",
+        "--radius-xl":                  "8px",
+
+        "--shadow-card":                "none",
+        "--shadow-elevated":            "0 2px 8px rgba(0,0,0,0.06)",
+        "--shadow-topbar":              "0 1px 0 #E5E7EB"
+    }
+}

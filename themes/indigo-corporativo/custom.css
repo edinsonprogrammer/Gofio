@@ -1,0 +1,11 @@
+/*
+ * Ejemplo de custom.css: además de las variables de theme.json, un tema
+ * puede afinar detalles visuales adicionales (radios, sombras, tipografía).
+ */
+.gofio-box {
+    border-radius: 10px;
+}
+
+.gofio-topbar {
+    box-shadow: 0 2px 6px rgba(67, 56, 202, 0.25);
+}
